@@ -3,7 +3,7 @@ using FileValidatorApi.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddScoped<IValidationService, ValidationService>();
+builder.Services.AddTransient<IValidationService, ValidationService>();
 builder.Services.AddTransient<ITimeMeasurementService, TimeMeasurementService>();
 
 builder.Services.AddControllers();
